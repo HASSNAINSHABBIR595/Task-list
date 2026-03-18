@@ -31,7 +31,7 @@ const Forground = () => {
   const deleteTask = (id) => {
     setTasks((prev) => prev.filter((task) => task.id !== id));
   };
-
+//hasnain
   return (
     <div
       ref={ref}
