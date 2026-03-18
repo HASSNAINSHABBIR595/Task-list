@@ -28,9 +28,6 @@ const Card = ({ data, reference, deleteTask, updatePosition }) => {
         updatePosition(data.id, { x: boundedX, y: boundedY });
       }}
       initial={{ x: data.position.x, y: data.position.y }} // set initial position only once
-
-
-
       className="
         flex flex-col
         justify-between
@@ -43,6 +40,7 @@ const Card = ({ data, reference, deleteTask, updatePosition }) => {
       "
     >
       {/* TOP CONTENT */}
+
       <div>
         <div className="flex justify-around gap-30">
           <div className="w-10 h-7 flex items-center justify-center bg-zinc-800 rounded-3xl mb-4">
@@ -61,12 +59,15 @@ const Card = ({ data, reference, deleteTask, updatePosition }) => {
           </div>
         </div>
 
-        <p className="text-zinc-300 font-semibold text-lg leading-snug mb-4">
+        <p
+          className="text-zinc-300 font-semibold text-lg leading-snug mb-4
+      "
+        >
           {data.title}
         </p>
 
         <div className="flex items-center justify-between text-sm text-zinc-500">
-          <span>{data.size}</span>
+          <span>{data.size} mb</span>
           {data.close ? <CircleX size={18} /> : <Download size={18} />}
         </div>
       </div>
